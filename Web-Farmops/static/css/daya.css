@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.container {
+    margin: auto;
+    position: relative;
+    width: 360px;
+    height: 640px;
+
+    background: #D1BE9C;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 290px;
+    top: 30px;
+}
+
+nav {
+    margin: auto;
+    height: 80px;
+    width: 360px;
+}
+
+ul {
+    position: absolute;
+    width: 140px;
+    height: 150px;
+    margin: 0px;
+    padding-top: 60px;
+    padding-left: 36.88px;
+    padding-bottom: 36px;
+
+    border-radius: 0px 0px 20px 0px;
+    background: #F2E8CF;
+    top: -100%;
+    left: 0px;
+    transition: all .5s;
+
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav ul li {
+    line-height: 30px;
+}
+
+nav ul li a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    color: #5A3F2B;
+}
+
+#check:checked~ul {
+    top: 0px;
+}
+
+.pakan {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 125px;
+    top: 110px;
+
+    background: #F9EAE1;
+    border-radius: 25px;
+}
+
+.pakan p {
+    position: absolute;
+    width: 67px;
+    height: 23px;
+    margin: 0px;
+    top: 9px;
+    left: 20px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5A3F2B  ;
+}
+
+.suhu {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 230px;
+    top: 110px;
+
+    background: #F9EAE1;
+    border-radius: 25px;
+}
+
+.suhu p {
+    position: absolute;
+    width: 59px;
+    height: 21px;
+    margin: 0px;
+    top: 10px;
+    left: 27px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    color: #5A3F2B;
+}
+
+.daya {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 20px;
+    top: 110px;
+
+    background: #5A3F2B;
+    border-radius: 25px;
+}
+
+.daya p {
+    position: absolute;
+    width: 59px;
+    height: 21px;
+    margin: 0px;
+    top: 10px;
+    left: 23px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    color: #F9EAE1;
+}
+
+.item{
+    border-radius: 10px;
+}
+
+.sistem h2 { 
+    position: absolute;
+    width: 198px;
+    height: 21px;
+    left: 115px;
+    top: 166px;
+    margin: 0px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5A3F2B;
+    
+}
+
+.widget {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    top: 410px;
+    left: 20px;
+    border-radius: 40;
+}
+
+#widgetBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 320px;
+    height: 320px;
+    border-radius: 50;
+}
+
+.pengaturan h2 {
+    position: absolute;
+    width: 198px;
+    height: 21px;
+    left: 81px;
+    top: 370px;
+    margin: 0px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5A3F2B;
+}
+
+.monitoring h2 {
+    position: absolute;
+    width: 198px;
+    height: 21px;
+    left: 121px;
+    top: 375px;
+    margin: 0px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5A3F2B;
+}
+
+.boxLabel {
+    position: absolute;
+    height: 88px;
+    width: 300px;
+    top: 330px;
+    right: 30px;
+    padding: 0px;
+    margin: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.label {
+    position: absolute;
+    width: 200px;
+    height: 32px;
+    top: 25PX;
+    left: 0px;
+    margin: 0;
+
+    background: #F2E8CF;
+    border-radius: 25px;
+    border: 0px;
+}
+
+.label p {
+    position: absolute;
+    left: 37px;
+    top: 250px;
+    margin: 0px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5A3F2B;
+}
+
+.checkbtn {
+    position: absolute;
+    color: white;
+    left: 36.88px;
+    top: 36.75px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.pln h2{
+    position: absolute;
+    width: 198px;
+    height: 21px;
+    left: 110px;
+    top: 330px;
+    margin: 0px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5A3F2B;
+}
+
+.plts h2{
+    position: absolute;
+    width: 198px;
+    height: 21px;
+    left: 215px;
+    top: 330px;
+    margin: 0px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5A3F2B;
+}
+
+.tombol{
+    position: absolute;
+    left: 2px;
+    top: 22px;
+}
+
+
+.power{
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    bottom: 100px;
+}
+
+
+
+.custom-button {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 150px;
+    top: 300px;
+    background-color: #D1BE9C;
+}
+
+.custom-power {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 80px;
+    top: 200px;
+    background-color: #D1BE9C;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/daya.css') }}">
+    <title>FARMOPS ALTISSIMO</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="sistem">
+            <h2>STATUS SISTEM</h2>
+        </div>
+
+        <div class="monitoring">
+            <h2>MONITORING</h2>
+        </div>
+
+        <a href="/pakan">
+            <div class="pakan">
+                <P>PAKAN</P>
+            </div>
+        </a>
+        <a href="/suhu">
+            <div class="suhu">
+                <p>SUHU</p>
+            </div>
+        </a>
+        <a href="/daya">
+            <div class="daya">
+                <p>DAYA</p>
+            </div>
+        </a>
+
+        <div class="widget">
+            <div id="widgetBox">
+                <iframe class="item" width="152" height="168px" frameborder="0"
+                    src="https://stem.ubidots.com/app/dashboards/public/widget/fZMHBVoYJu9Eyr-8DAzpjdaEsBGJAAIf7kviCy57o4I?embed=true"></iframe>
+                <iframe class="item" width="152" height="168px" frameborder="0"
+                    src="https://stem.ubidots.com/app/dashboards/public/widget/0q-miaIdRSTMD3fqMxvUTI6iVHq0jFeOVii1dAhlGyU?embed=true"></iframe>
+            </div>
+        </div>
+
+        <div>
+            <img class="logo" src="{{ url_for('static',filename='img/logo.svg')}}" id="logo" width="80px" />
+        </div>
+
+        <div class="pln">
+            <h2>PLN</h2>
+        </div>
+
+        <div class="plts">
+            <h2>PLTS</h2>
+        </div>
+
+        <form method="POST" action="/toggle_switch">
+            <button type="submit" name="button" value="toggle"
+                class="custom-button {% if switch_value == 1 %}on{% endif %}">
+                {% if switch_value == 1 %}
+                <img class="tombol" src="{{ url_for('static', filename='img/button_on.svg') }}" alt="">
+                {% else %}
+                <img class="tombol" src="{{url_for('static', filename='img/button_off.svg') }}" alt="">
+                {% endif %}
+            </button>
+        </form>
+
+        <form method="POST" action="/toggle_power">
+            <button type="submit" name="button" value="toggle"
+                class="custom-power {% if power_value == 1 %}on{% endif %}">
+                {% if power_value == 1 %}
+                <img class="power" src="{{ url_for('static', filename='img/power_on.svg') }}" alt="">
+                {% else %}
+                <img class="power" src="{{url_for('static', filename='img/power_off.svg') }}" alt="">
+                {% endif %}
+            </button>
+        </form>
+
+
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <img src="{{ url_for('static',filename='img/toggle.svg')}}">
+            </label>
+            <ul>
+                <label for="check" class="checkbtn">
+                    <img src="{{ url_for('static',filename='img/toggle.svg')}}">
+                </label><br>
+                <li>
+                    <a href="/index">Informasi</a>
+                </li>
+                <li><a href="/laporan">Laporan</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</body>
+
+</html>

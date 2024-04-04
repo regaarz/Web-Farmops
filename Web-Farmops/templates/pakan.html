@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pakan.css') }}">
+    <title>FARMOPS ALTISSIMO</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pakan">
+            <p>PAKAN</p>
+        </div>
+
+        <div class="pengaturan">
+            <h2>PENGATURAN PAKAN</h2>
+        </div>
+
+        <div class="monitoring">
+            <h2>MONITORING</h2>
+        </div>
+
+        <a href="/daya">
+            <div class="daya">
+                <P>DAYA</P>
+            </div>
+        </a>
+
+        <a href="/suhu">
+            <div class="suhu">
+                <p>SUHU</p>
+            </div>
+        </a>
+
+        <div class="widget">
+            <div id="widgetBox">
+                <iframe class="item" width="152" height="152px" frameborder="0"
+                    src="https://stem.ubidots.com/app/dashboards/public/widget/eZQDrBt5gdQIZvybAA7zY2jafBuguOyRDBHB-NXaVx0?embed=true"></iframe>
+                <iframe class="item" width="152" height="152px" frameborder="0"
+                    src="https://stem.ubidots.com/app/dashboards/public/widget/P23ruZTwx9zaW8-G5Tro-4Hv0-9-PA-BXKvgc3C7xBw?embed=true"></iframe>
+            </div>
+        </div>
+
+        <div class="boxLabel">
+            <div class="label_1">
+                <p>Pakan 1</p>
+            </div>
+
+            <div class="label_2">
+                <p>Pakan 2</p>
+            </div>
+
+        </div>
+        <div>
+            <form method="POST">
+                <div><input class="input1" type="time" name="jamPakan1" value={{feeding_schedule_1}} /></div>
+                <div><input class="input2" type="time" name="jamPakan2" value={{feeding_schedule_2}} /></div>
+                <input class="submit" type="submit" value="Simpan"> </input>
+            </form>
+        </div>
+
+        <div>
+            <img class="logo" src="{{ url_for('static',filename='img/logo.svg')}}" id="logo" width="80px" />
+        </div>
+
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <img src={{ url_for('static',filename='img/toggle.svg')}}>
+            </label>
+            <ul>
+                <label for="check" class="checkbtn">
+                    <img src={{ url_for('static',filename='img/toggle.svg')}}>
+                </label><br>
+                <li>
+                    <a href="/index">Informasi</a>
+                </li>
+                <li><a href="/laporan">Laporan</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</body>
+
+</html>

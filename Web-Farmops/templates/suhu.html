@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/suhu.css') }}">
+    <title>FARMOPS ALTISSIMO</title>
+</head>
+
+<body>
+    <div class="box">
+
+        <a href="/suhu">
+            <div class="suhu">
+                <p>SUHU</p>
+            </div>
+        </a>
+
+        <div class="monitoring">
+            <h2>MONITORING</h2>
+        </div>
+
+        <div class="pengaturan">
+            <h2>PENGATURAN SUHU</h2>
+        </div>
+
+        <a href="/daya">
+            <div class="daya">
+                <P>DAYA</P>
+            </div>
+        </a>
+
+        <a href="/pakan">
+            <div class="pakan">
+                <p>PAKAN</p>
+            </div>
+        </a>
+
+        <div class="widget">
+            <div id="widgetBox">
+                <iframe class="item" width="152px" height="168px" frameborder="0"
+                    src="https://stem.ubidots.com/app/dashboards/public/widget/n_lhPhRVIIhzlnglsZZwSP0vuZ8ZxRCZSP-Ewsqf1Xw?embed=true"></iframe>
+                <iframe class="item" width="152px" height="168px" frameborder="0"
+                    src="https://stem.ubidots.com/app/dashboards/public/widget/q5lediTOO_uMNJ6TCc31BgNNrH-36Sjc54Nnyikcepo?embed=true"></iframe>
+            </div>
+        </div>
+
+        <div class="boxLabel">
+
+            <div>
+                <div class="label_1">
+                    <p>Suhu max</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="label_2">
+                    <p>Suhu min</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <form method="post">
+                <div class="boxInput">
+                    <div><input class="input" type="text" name="temp_high" value={{temp_high}} /></div>
+                    <div><input class="input" type="text" name="temp_low" value={{temp_low}} /></div>
+                </div>
+                <input class="submit" type="submit" value="Simpan"> </input>
+            </form>
+        </div>
+        <div>
+            <img class="logo" src="{{ url_for('static',filename='img/logo.svg')}}" id="logo" width="80px" />
+        </div>
+
+        <div>
+            <img class="logo" src="{{ url_for('static',filename='img/logo.svg')}}" id="logo" width="80px" />
+        </div>
+
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <img src={{ url_for('static',filename='img/toggle.svg')}}>
+            </label>
+
+            <ul>
+                <label for="check" class="checkbtn">
+                    <img src={{ url_for('static',filename='img/toggle.svg')}}>
+                </label><br>
+                <li>
+                    <a href="/index">Informasi</a>
+                </li>
+                <li><a href="/laporan">Laporan</a></li>
+            </ul>
+        </nav>
+        <div>
+            <img class="logo" src="{{ url_for('static',filename='img/logo.svg')}}" id="logo" width="80px" />
+        </div>
+    </div>
+</body>
+
+</html>
